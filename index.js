@@ -109,11 +109,11 @@ function getCountryWins(data, initials) {
 
     let finalsGames = data.filter(gameInfo => gameInfo.Stage === "Final")
 
-    return finalsGames.reduce(function(total, cv, idx) {
+    return finalsGames.reduce(function(total, cv) {
 
-        if (finalsGames[idx]["Home Team Initials"] === initials &&  finalsGames[idx]["Home Team Goals"] > finalsGames[idx]["Away Team Goals"]) {
+        if (cv["Home Team Initials"] === initials &&  cv["Home Team Goals"] > cv["Away Team Goals"]) {
             return total + 1
-        } else if (finalsGames[idx]["Away Team Initials"] === initials &&  finalsGames[idx]["Away Team Goals"] > finalsGames[idx]["Home Team Goals"]) {
+        } else if (cv["Away Team Initials"] === initials &&  cv["Away Team Goals"] > cv["Home Team Goals"]) {
             return total + 1
         } else {
             return total
