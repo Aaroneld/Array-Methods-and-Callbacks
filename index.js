@@ -12,6 +12,40 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+// (a) 
+const findHomeTeam2014 = fifaData.filter((item){
+    return item["Year"] === 2014;
+   
+}); 
+console.log(findHomeTeam);
+
+//(b)
+const findAwayTeam2014 = fifaData.filter((item){
+    return item["Year"] === 2014;
+
+}); 
+console.log(findAwayTeam2014);
+
+//(c)
+const homeTeamGoals2014 = fifaData.filter((item){
+    return item["Home Team Goals"] === 2014;
+
+}); 
+console.log(homeTeamGoals2014);
+
+//(d)
+const awayTeamGoals2014 = fifaData.filter((item){
+    return item["Away Team Goals"] === 2014;
+
+}); 
+console.log(awayTeamGoals2014);
+
+//(e)
+const winnerWorldCup2014 = fifaData.filter((item){
+    return item["Home Team Name"] === 2014;
+
+}); 
+console.log(winnerWorldCup2014);
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
