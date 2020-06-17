@@ -12,6 +12,12 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+// const gameFinal2014 = fifaData.filter( game => {
+//  return (game["Year"] === 2014 && game["Stage"] === "Final")
+// });
+
+// console.log(gameFinal2014["Home Team Name"]);
+
 /*(a) Home Team name for 2014 world cup final - Germany */
 
 let home2014 = fifaData.filter((game) => {
@@ -64,6 +70,10 @@ function getFinals(data) {
 console.log(getFinals(fifaData));
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
+
+// const years = callback(data).map(game=>{
+//         return game.Year
+//     });
 
 function getYears(callback, data) {
     let years = [];
